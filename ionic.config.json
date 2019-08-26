@@ -1,5 +1,7 @@
 {
   "name": "nst",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

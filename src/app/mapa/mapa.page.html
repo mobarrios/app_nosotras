@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-back-button dafaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+<!-- <ion-content>
+    <div id='map'></div>
+<div #mapElement class="map"></div> 
+</ion-content> -->
+
+<ion-content padding>
+    <!-- <ion-item>
+        <ion-label>Tipo</ion-label>
+        <ion-select placeholder="Seleccionar Tipo">
+            <ion-select-option  *ngFor="let tipo of tipos" value="{{tipo.id}}">Peperoni</ion-select-option>
+      
+        </ion-select>
+    </ion-item> -->
+    <ion-button size="small" *ngFor="let tipo of tipos" (click)="categoria(tipo.id)">
+            {{tipo.name}}
+    </ion-button>
+    <!-- <ion-button size="small" (click)="categoria('seguridad')">
+        Seguridad
+    </ion-button>
+    <ion-button size="small" (click)="categoria('justicia')">
+        Justicia
+    </ion-button>
+    <ion-button size="small" (click)="categoria('salud')">
+        Salud
+    </ion-button>
+    <ion-button size="small" (click)="categoria('genero')">
+        Políticas de Género
+    </ion-button> -->
+
+    <div #mapElement class="map"></div>
+</ion-content>

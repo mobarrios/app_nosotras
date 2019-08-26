@@ -9,12 +9,17 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    loadChildren: './home/home.module#HomePageModule'
   },
   {
     path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+    loadChildren: './list/list.module#ListPageModule'
+  },
+  { path: 'mapa', loadChildren: './mapa/mapa.module#MapaPageModule' },
+  { path: 'saber', loadChildren: './saber/saber.module#SaberPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'consultas', loadChildren: './consultas/consultas.module#ConsultasPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
 ];
 
 @NgModule({

@@ -1,44 +1,96 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+          NOS.OTRAS
+      </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="danger" (click)="call()">
+          <ion-icon name="call"> </ion-icon>
+          <strong>#911</strong>
+      </ion-fab-button>
+  </ion-fab>
+  <ion-row>
+      <ion-col class="ion-text-center" size="12">
+          <img width="150px" src="/assets/imgs/logo Nosotras_OUT.png">
+      </ion-col>
+  </ion-row>
+  <ion-card class="welcome-card">
+      <ion-card-header class="ion-text-center">
+          <ion-card-subtitle>Bienvenida a NOS.OTRAS</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+          <p>Aplicación para las mujeres del municipio de Esteban Echeverría.</p>
       </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
+  </ion-card>
+  <ion-card>
+      <ion-list lines="none">
+          <ion-list-header>
+              <ion-label>Información</ion-label>
+          </ion-list-header>
+          <ion-item href="https://ionicframework.com/docs/">
+              <ion-icon slot="start" color="success" name="information-circle-outline"></ion-icon>
+              <ion-label color="secondary">¿Qué es el género?</ion-label>
+          </ion-item>
+          <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+              <ion-icon slot="start" color="success" name="information-circle-outline"></ion-icon>
+              <ion-label color="secondary">¿Qué es la violencia de género?</ion-label>
+          </ion-item>
+          <ion-item href="https://ionicframework.com/docs/layout/structure">
+              <ion-icon slot="start" color="success" name="information-circle-outline"></ion-icon>
+              <ion-label color="secondary">¿Qué hacer frente a una situación de violencia de género?</ion-label>
+          </ion-item>
+          <ion-item (click)="saber()">
+              <ion-icon slot="start" color="success" name="information-circle-outline"></ion-icon>
+              <ion-label color="secondary"> Ver más…</ion-label>
+          </ion-item>
+      </ion-list>
+  </ion-card>
+
+
+
+  <ion-card>
+      <ion-card-header>
+          <ion-card-subtitle>Caja de Herramientas
+          </ion-card-subtitle>
+          <ion-card-title>Capítulo 9: Violencias</ion-card-title>
+      </ion-card-header>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/nDntugjhoxM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <ion-card-content>
+
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-item>
+          <ion-icon name="pin" slot="start"></ion-icon>
+          <ion-label>Mapa de Nos.otras</ion-label>
+          <ion-button fill="outline" slot="end" (click)="goToMapa()" routerLinkActive="router-link-active">Ver</ion-button>
       </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
+
+      <ion-card-content>
+          En el mapa se encuentran los puntos mas importantes de servicios para que puedas acceder con mayor facilidad.
+      </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+      <ion-item>
+          <ion-icon name="business" slot="start"></ion-icon>
+          <ion-label>Mi Municipio</ion-label>
+          <ion-button fill="outline" slot="end" (click)="municipio()" routerLinkActive="router-link-active">ir</ion-button>
       </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+
+      <ion-card-content>
+          Link a la pagina web del municipio de Esteban Echeverría.
+      </ion-card-content>
+  </ion-card>
+
+
 </ion-content>
