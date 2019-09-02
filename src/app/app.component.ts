@@ -57,7 +57,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private router: Router,
-    private callNumber: CallNumber
+     private callNumber: CallNumber
 
   ) {
     this.initializeApp();
@@ -79,5 +79,11 @@ export class AppComponent {
     this.callNumber.callNumber('#111', true)
   .then(res => console.log('Launched dialer!', res))
   .catch(err => console.log('Error launching dialer', err));
+  }
+
+  logout()
+  {
+  
+
   }
 }
